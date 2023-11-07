@@ -22,39 +22,65 @@
 
 .navigation {
     background-color: var(--main);
-    grid-column: 1 / 2;
+    /* grid-column: 1 / 2; */
     grid-row: 1 / -1;
     display: grid;
     grid-template-rows: 10% 40% 50%;
-    /* justify-content: center; */
+    justify-content: center;
     color: var(--smoke);
 }
 
 .navigation > .logo {
-    border: 2px solid red;
-    grid-row: 1 / 2;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo > h2 {
+    height: 38px;
+    width: auto;
+    font-size: 32px;
+}
+
+.logo > svg {
+    height: 34px;
+    width: auto;
+    fill: var(--accent);
 }
 
 .navigation > .main-links {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     grid-row: 2 / 3;
-    text-align: center;
 }
 
-.navigation > .main-links > ul {
+.main-links > ul {
     display: grid;
     height: fit-content;
     gap: 20px;
 }
 
+.main-links > ul > li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: auto;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.main-links > ul > li > svg {
+    height: 30px;
+    width: auto;
+    fill: var(--accent);
+}
+
 .navigation > .utility-links {
-    border: 2px solid red;
+    border: 2px solid aqua;
     grid-row: 3 / 4;
     text-align: center;
 }
 
-.navigation > .utility-links > ul {
+.utility-links > ul {
     border: 1px solid blue;
     display: flex;
     flex-direction: column;
