@@ -132,7 +132,9 @@ ul > li:hover {
     display: grid;
     grid-template-rows: 1fr 1fr;
     padding: 15px;
-    margin-top: 25px;
+    gap: 20px;
+    /* margin-top: 25px; */
+    /* margin-bottom: 25px; */
 }
 
 .header > .header-top {
@@ -181,8 +183,8 @@ ul > li:hover {
 }
 
 .user h2 {
-    /* border: 1px solid red; */
     width: auto;
+    font-weight: 400;
 }
 
 .user > svg {
@@ -196,8 +198,43 @@ ul > li:hover {
     height: 42px;
 }
 
+/* Header Bottom */
+
 .header > .header-bottom {
     grid-row: 2 / 3;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.header-bottom {
+    /* border: 1px solid blue; */
+    /* height: fit-content; */
+    /* padding: 10px; */
+    gap: 50px;
+    text-align: center;
+    /* align-items: center; */
+}
+
+.header-bottom > .alerts {
+    border-radius: 8px;
+    color: var(--smoke);
+    background-color: var(--accent);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+
+    display: flex;
+    align-items: center;
+}
+
+.alerts:hover {
+    transform: scale(0.95);
+    cursor: pointer;
+}
+
+.alerts p {
+    /* border: 1px solid red; */
+    height: fit-content;
+    font-weight: bold;
 }
 
 .main-content {
