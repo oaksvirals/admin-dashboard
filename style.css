@@ -15,18 +15,19 @@
 
 .dashboard {
  display: grid;
- grid-template: 1fr 5fr 1fr / 1fr 2fr 2fr;
+ grid-template: minmax(150px, 1fr) minmax(500px, 5fr) minmax(300px, 1fr) / 1fr 2fr 2fr;
 }
 
 /* ----- Left Navigation Menu ----- */
 
 .navigation {
     background-color: var(--main);
-    /* grid-column: 1 / 2; */
+    grid-column: 1 / 2;
     grid-row: 1 / -1;
     display: grid;
-    grid-template-rows: 10% 40% 50%;
+    grid-template-rows: minmax(150px, 10%) minmax(250px, 40%) minmax(150px, 50%);
     justify-content: center;
+    padding: 15px;
     color: var(--smoke);
 }
 
@@ -51,21 +52,25 @@
 .navigation > .main-links {
     /* border: 2px solid red; */
     grid-row: 2 / 3;
+    margin-top: 50px;
 }
 
 .main-links > ul {
+    /* border: 1px solid red; */
     display: grid;
     height: fit-content;
     gap: 20px;
 }
 
 .main-links > ul > li {
+    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     gap: 10px;
     width: auto;
     font-size: 28px;
     font-weight: bold;
+    padding: 5px;
 }
 
 .main-links > ul > li > svg {
@@ -75,27 +80,42 @@
 }
 
 .navigation > .utility-links {
-    border: 2px solid aqua;
+    /* border: 1px solid aqua; */
     grid-row: 3 / 4;
-    text-align: center;
 }
 
 .utility-links > ul {
-    border: 1px solid blue;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     height: fit-content;
     gap: 20px;
 }
 
 .utility-links > ul > li {
-    border: 1px solid pink;
-    align-items: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: auto;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 5px;
 }
 
-ul li {
+.utility-links > ul > li > svg {
+    height: 30px;
+    width: auto;
+    fill: var(--accent);
+}
+
+ul > li {
     list-style: none;
-    font-size: 22px;
+}
+
+ul > li:hover {
+    /* transform: scale(0.95); */
+    cursor: pointer;
+    background-color: var(--smoke);
+    color: var(--main);
+    border-radius: 8px;
 }
 
 /* ----- Header ----- */
