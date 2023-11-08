@@ -237,9 +237,57 @@ ul > li:hover {
     font-weight: bold;
 }
 
+/* ----- Main Content Area ----- */
+
 .main-content {
     background-color: var(--background);
     grid-column: 2 / -1;
     grid-row: 2 / -1;
     box-shadow: 2px -2px 12px 4px rgba(0,0,0,0.4) inset;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.left-main {
+    grid-column: 1 / 3;
+
+    border: 1px solid red;
+    resize: both;
+    /* overflow: auto; */
+    display: grid;
+    gap: 15px;
+    padding: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(1fr, 1fr));
+}
+
+.left-main > .card {
+    border: 1px solid black;
+    background: var(--smoke);
+    /* padding: 150px; */
+    width: 450px;
+    height: 250px;
+}
+
+.right-main {
+    border: 1px solid blue;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-main > .announcements {
+    background-color: var(--smoke);
+    border: 1px solid black;
+    width: 90%;
+    height: 95%;
+}
+
+.right-main > .trending {
+    background-color: var(--smoke);
+    border: 1px solid black;
+    width: 90%;
+    height: 95%;
 }
