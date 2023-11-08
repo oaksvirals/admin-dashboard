@@ -255,7 +255,6 @@ ul > li:hover {
 
     border: 1px solid red;
     resize: both;
-    /* overflow: auto; */
     display: grid;
     gap: 15px;
     padding: 25px;
@@ -264,11 +263,53 @@ ul > li:hover {
 }
 
 .left-main > .card {
-    border: 1px solid black;
+    border-left: 10px solid var(--accent);
     background: var(--smoke);
-    /* padding: 150px; */
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    padding: 20px;
     width: 450px;
     height: 250px;
+    border-radius: 8px;
+
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: 5fr 1fr 1fr;
+}
+
+.card > h3 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.card > p {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column: 1 / 4;
+}
+
+.card > .card-svg {
+    grid-row: 3;
+    grid-column: 3;
+
+    display: grid;
+    grid-template-columns: 10fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.card-svg > svg {
+    width: 32px;
+}
+
+.card-svg-1 {
+    grid-column-start: 2;
+}
+
+.card-svg-2 {
+    grid-column-start: 3;
+}
+
+.card-svg-3 {
+    grid-column-start: 4;
 }
 
 .right-main {
@@ -280,14 +321,16 @@ ul > li:hover {
 
 .right-main > .announcements {
     background-color: var(--smoke);
-    border: 1px solid black;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
     width: 90%;
     height: 95%;
+    border-radius: 8px;
 }
 
 .right-main > .trending {
     background-color: var(--smoke);
-    border: 1px solid black;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
     width: 90%;
     height: 95%;
+    border-radius: 8px;
 }
